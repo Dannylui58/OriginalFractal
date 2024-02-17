@@ -1,0 +1,57 @@
+public void setup(){
+ size(500,500);
+ rectMode(CENTER);
+}
+public void draw(){
+  background(255);
+  myFractal(250,250,100,99,30,45,90,95,80,70,20,50,65,40,10,25,60,17,14,127,27);
+}
+public void myFractal(int x,int y,int siz,int z,int a,int b,int c,int d,int e,int f,int g,int h,int j,int k,int l,int m,int n,int o,int p,int q,int r){
+  fill(#C48914);
+  noStroke();
+  ellipse(x,y,siz+g,siz-a);
+  fill(#C48914);
+  noStroke();
+  ellipse(x,y-m,siz+h,siz-h);
+  fill(#C48914);
+  ellipse(x,y-k,siz+g,siz);
+  fill(0);
+  ellipse(x-a,y-b,siz-f,siz-f);
+  ellipse(x+a,y-b,siz-f,siz-f);
+  fill(255);
+  ellipse(x-a,y-b,siz-e,siz-e);
+  ellipse(x+a,y-b,siz-e,siz-e);
+  fill(#24EAF0);
+  ellipse(x-a,y-b,siz-c,siz-c);
+  ellipse(x+a,y-b,siz-c,siz-c);  
+  fill(0);
+  ellipse(x-a,y-b,siz-d,siz-d);
+  ellipse(x+a,y-b,siz-d,siz-d); 
+  ellipse(x-a,y-j,siz-f,siz-d);
+  ellipse(x+a,y-j,siz-f,siz-d);
+  stroke(1);
+  ellipse(x,y+(o/2),siz-g,siz-e);
+  fill(#CBA965);
+  stroke(1);
+  ellipse(x,y-l,siz,siz-n); 
+  fill(0);
+  ellipse(x,y-m,siz-h,siz-c);
+  fill(255);
+  rect(x,y+p,siz-c,siz-d);
+  rect(x+g,y+p,siz-c,siz-d);
+  rect(x-r,y+p,siz-c,siz-d);
+  fill(0);
+  ellipse(x+a,y-l,siz-z,siz-z);
+  ellipse(x+k,y-p,siz-z,siz-z);
+  ellipse(x+a,y-o,siz-z,siz-z);
+  ellipse(x-a,y-l,siz-z,siz-z);
+  ellipse(x-k,y-p,siz-z,siz-z);
+  ellipse(x-a,y-o,siz-z,siz-z);
+  ellipse(x,y-c,siz,siz-d);
+  rect(x,y-q,siz-k,siz-a);
+  if(siz > 10)
+  {
+   myFractal(x-siz/2,y-(siz/2)-(siz/2),siz/2,z/2,a/2,b/2,c/2,d/2,e/2,f/2,g/2,h/2,j/2,k/2,l/2,m/2,n/2,o/2,p/2,q/2,r/2);
+   myFractal(x-siz*2,y-(siz/2)-(siz/2),siz*2,z*2,a*2,b*2,c*2,d*2,e*2,f*2,g*2,h*2,j*2,k*2,l*2,m*2,n*2,o*2,p*2,q*2,r*2);
+  }
+}
