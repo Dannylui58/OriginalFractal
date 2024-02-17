@@ -51,7 +51,7 @@ public void myFractal(int x,int y,int siz,int z,int a,int b,int c,int d,int e,in
   rect(x,y-q,siz-k,siz-a);
   if(siz > 10)
   {
-   myFractal(x-siz/2,y-(siz/2)-(siz/2),siz/2,z/2,a/2,b/2,c/2,d/2,e/2,f/2,g/2,h/2,j/2,k/2,l/2,m/2,n/2,o/2,p/2,q/2,r/2);
-   myFractal(x+siz/2,y-(siz/2)-(siz/2),siz/2,z/2,a/2,b/2,c/2,d/2,e/2,f/2,g/2,h/2,j/2,k/2,l/2,m/2,n/2,o/2,p/2,q/2,r/2);
+   myFractal(x-siz/2,y-(siz/2)-(siz/2)-8,siz/2,z/2,a/2,b/2,c/2,d/2,e/2,f/2,g/2,h/2,j/2,k/2,l/2,m/2,n/2,o/2,p/2,q/2,r/2);
+   myFractal(x+siz/2,y-(siz/2)-(siz/2)-8,siz/2,z/2,a/2,b/2,c/2,d/2,e/2,f/2,g/2,h/2,j/2,k/2,l/2,m/2,n/2,o/2,p/2,q/2,r/2);
   }
 }
